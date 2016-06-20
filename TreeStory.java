@@ -5,18 +5,23 @@
 * and use them in a single formatted String.
 */
 
-import java.io.Console;
+import java.util.Scanner;
 
 public class TreeStory {
 
     public static void main(String[] args) {
-        Console console = System.console();
+        Scanner userInput = new Scanner(System.in);
         /*  Some terms:
             noun - Person, place or thing
             verb - An action
             adjective - A description used to modify or describe a noun
             Enter your amazing code here!
         */
+        System.out.print("Enter you name:   ");
+        String name = userInput.nextLine();
+        System.out.print("Enter an adjective:   ");
+        String adjective = userInput.nextLine();
+        System.out.printf("%s is very %s \n", name, adjective);
     }
 
 }
