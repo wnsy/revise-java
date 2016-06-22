@@ -17,11 +17,20 @@ public class TreeStory {
             adjective - A description used to modify or describe a noun
             Enter your amazing code here!
         */
+
         System.out.print("Enter you name:   ");
         String name = userInput.nextLine();
         System.out.print("Enter an adjective:   ");
         String adjective = userInput.nextLine();
-        System.out.printf("%s is very %s \n", name, adjective);
-    }
+        System.out.print("Enter a noun:   ");
+        String noun = userInput.nextLine();
+        System.out.print("Enter ad adverb:   ");
+        String adverb = userInput.nextLine();
+        System.out.print("Enter a verb ending with -ing:  ");
+        String verb = userInput.nextLine();
 
+        System.out.printf("Your TreeStory:\n--------------\n");
+        System.out.printf("%s is a %s %s.  ", name, adjective, noun);
+        System.out.printf("They are always %s %s.\n", adverb, verb);
+    }
 }
