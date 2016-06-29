@@ -31,12 +31,18 @@ public class TreeStory {
     String name = userInput.nextLine();
     System.out.print("Enter an adjective:   ");
     String adjective = userInput.nextLine();
-    System.out.print("Enter a noun:   ");
-    String noun = userInput.nextLine();
-    if (noun.equalsIgnoreCase("dork")) {
-      System.out.printf("That language is not allowed. Exiting. \n\n");
-      System.exit(0);
-    }
+    String noun;
+    boolean isInvalidWord;
+    do {
+      System.out.print("Enter a noun:   ");
+      noun = userInput.nextLine();
+      isInvalidWord = (noun.equalsIgnoreCase("dork") ||
+                       noun.equalsIgnoreCase("jerk"));
+      if (isInvalidWord) {
+        System.out.printf("That language is not allowed. Try again. \n\n");
+      }
+    } while(isInvalidWord);
+    
     System.out.print("Enter an adverb:   ");
     String adverb = userInput.nextLine();
     System.out.print("Enter a verb ending with -ing:  ");
