@@ -20,7 +20,7 @@ public class TreeStory {
     System.out.print("How old are you?   ");
     String ageAsString = userInput.nextLine();
     int age = Integer.parseInt(ageAsString); //converting a string to an Integer
-
+//on GIT: adds feature branch
     //int age = 12;
     if (age < 13) {
       //Insert exit code
@@ -33,7 +33,11 @@ public class TreeStory {
     String adjective = userInput.nextLine();
     System.out.print("Enter a noun:   ");
     String noun = userInput.nextLine();
-    System.out.print("Enter ad adverb:   ");
+    if (noun.equalsIgnoreCase("dork")) {
+      System.out.printf("That language is not allowed. Exiting. \n\n");
+      System.exit(0);
+    }
+    System.out.print("Enter an adverb:   ");
     String adverb = userInput.nextLine();
     System.out.print("Enter a verb ending with -ing:  ");
     String verb = userInput.nextLine();
